@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calendly-mcp"
+version = "0.1.0"
+description = "MCP server connecting Claude Desktop/Code to Calendly for natural-language scheduling management"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "NyxTools · LEW Enterprises LLC"},
+]
+keywords = ["mcp", "calendly", "claude", "scheduling", "ai", "model-context-protocol"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Scheduling",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "httpx>=0.25.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.0.0",
+    "respx>=0.21.0",
+    "ruff>=0.4.0",
+    "mypy>=1.8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/NyxToolsDev/calendly-mcp-server"
+Documentation = "https://github.com/NyxToolsDev/calendly-mcp-server#readme"
+Repository = "https://github.com/NyxToolsDev/calendly-mcp-server"
+Issues = "https://github.com/NyxToolsDev/calendly-mcp-server/issues"
+Changelog = "https://github.com/NyxToolsDev/calendly-mcp-server/blob/main/CHANGELOG.md"
+
+[project.scripts]
+calendly-mcp = "calendly_mcp.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "premium: marks tests requiring premium license",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "ANN", "B", "A", "COM", "C4", "PT", "RET", "SIM"]
+ignore = ["ANN101", "ANN102", "ANN204", "COM812"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true

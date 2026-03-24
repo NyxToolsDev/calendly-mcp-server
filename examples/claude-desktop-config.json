@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "calendly": {
+      "command": "calendly-mcp",
+      "env": {
+        "CALENDLY_ACCESS_TOKEN": "your-calendly-personal-access-token",
+        "LICENSE_KEY": "optional-premium-license-key"
+      }
+    }
+  }
+}
