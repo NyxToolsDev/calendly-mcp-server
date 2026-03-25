@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "calendly-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server connecting Claude Desktop/Code to Calendly for natural-language scheduling management"
 readme = "README.md"
 license = {text = "MIT"}

@@ -1,5 +1,7 @@
 # Calendly MCP Server
 
+<!-- mcp-name: io.github.NyxToolsDev/calendly-mcp-server -->
+
 An MCP (Model Context Protocol) server that connects Claude Desktop and Claude Code to your Calendly account, enabling natural-language scheduling management.
 
 ## Installation

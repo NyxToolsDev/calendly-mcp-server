@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.NyxToolsDev/calendly-mcp-server",
+  "description": "Connect Claude to Calendly — schedule meetings, check availability, manage events",
+  "version": "0.1.1",
+  "repository": {
+    "url": "https://github.com/NyxToolsDev/calendly-mcp-server",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "calendly-mcp",
+      "version": "0.1.1",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "environmentVariables": [
+    {
+      "name": "CALENDLY_API_TOKEN",
+      "description": "Calendly Personal Access Token or OAuth token",
+      "isRequired": true,
+      "isSecret": true
+    }
+  ]
+}
