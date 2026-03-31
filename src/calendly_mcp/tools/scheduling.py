@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 PREMIUM_REQUIRED_MSG = (
     "This is a premium feature. "
-    "Upgrade at https://lewenterprises.lemonsqueezy.com/checkout for $12/mo "
+    "Upgrade at https://nyxtools.gumroad.com for $12/mo "
     "to unlock scheduling, cancellation, rescheduling, and analytics tools."
 )
 

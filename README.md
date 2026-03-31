@@ -240,4 +240,4 @@ The Calendly API enforces rate limits. The MCP server automatically retries with
 
 MIT -- see [LICENSE](LICENSE) for details.
 
-Copyright (c) 2026 NyxTools · LEW Enterprises LLC
+Copyright (c) 2026 NyxTools
